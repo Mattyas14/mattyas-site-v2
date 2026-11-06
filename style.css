@@ -954,3 +954,25 @@ footer .copyright {
   text-shadow: 0 0 12px rgba(201, 178, 255, 0.35);
 }
 
+/* MATTYAS — le haut de l'image dans la navbar */
+.navbar {
+  background-position: center top;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+
+  background-image:
+    linear-gradient(
+      rgba(8, 6, 13, 0.48),
+      rgba(8, 6, 13, 0.72)
+    ),
+    url("mattyas-night.png");
+}
+
+/* Conserver le fond adapté aux petits écrans */
+@media (max-width: 600px) {
+  .navbar {
+    background-size: auto 220px;
+    background-position: center top;
+  }
+}
+
