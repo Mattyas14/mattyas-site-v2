@@ -631,3 +631,77 @@ footer .copyright {
   box-shadow: 0 0 30px rgba(154, 130, 219, 0.2);
 }
 
+/* MATTYAS — navigation nocturne */
+
+.navbar {
+  min-height: 70px;
+  padding: 14px clamp(20px, 6vw, 90px);
+  background: rgba(8, 6, 13, 0.72);
+  border-bottom: 1px solid rgba(201, 178, 255, 0.13);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.logo {
+  font-family: "Cinzel", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.logo:hover {
+  color: #ffffff;
+  text-shadow: 0 0 18px rgba(201, 178, 255, 0.55);
+}
+
+.navbar nav {
+  gap: clamp(18px, 3vw, 38px);
+}
+
+.navbar nav a {
+  position: relative;
+  padding: 8px 0;
+  color: rgba(230, 219, 250, 0.7);
+  font-size: 0.88rem;
+  letter-spacing: 0.025em;
+  transition: color 0.25s ease;
+}
+
+.navbar nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: #c9b2ff;
+  box-shadow: 0 0 10px rgba(201, 178, 255, 0.65);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+.navbar nav a:hover,
+.navbar nav a:focus-visible {
+  color: #f5efff;
+}
+
+.navbar nav a:hover::after,
+.navbar nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 390px) {
+  .navbar {
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .navbar nav {
+    flex-wrap: wrap;
+  }
+}
+
