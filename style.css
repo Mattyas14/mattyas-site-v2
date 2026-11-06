@@ -562,3 +562,22 @@ footer .copyright {
   }
 }
 
+/* Remove the duplicate CSS pagoda */
+.hero > .pagoda {
+  display: none;
+}
+
+/* Keep the hero text clear */
+.hero-content {
+  background: radial-gradient(
+    ellipse,
+    rgba(8, 6, 13, 0.28),
+    transparent 75%
+  );
+}
+
+/* Keep the navigation readable */
+.navbar {
+  background: rgba(8, 6, 13, 0.78);
+}
+
