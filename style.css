@@ -429,3 +429,40 @@ footer .copyright {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Japanese pagoda silhouette */
+
+.hero {
+  isolation: isolate;
+}
+
+.pagoda {
+  position: absolute;
+  z-index: 1;
+  bottom: 3%;
+  left: 50%;
+  width: clamp(230px, 42vw, 440px);
+  transform: translateX(-50%);
+  opacity: 0.94;
+  pointer-events: none;
+}
+
+.pagoda svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 24px rgba(154, 130, 219, 0.12));
+}
+
+.hero-content {
+  z-index: 3;
+}
+
+.japanese {
+  z-index: 3;
+}
+
+.horizon {
+  z-index: 2;
+}
+
