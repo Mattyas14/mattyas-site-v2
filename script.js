@@ -1,74 +1,90 @@
 
-/* MATTYAS 2.0 — subtle animations */
+/* MATTYAS 2.0 — animations nocturnes */
 
 const reduceMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
 ).matches;
 
+/* Apparition douce des sections */
 if (!reduceMotion) {
   const sections = document.querySelectorAll(
     ".section, .feature"
   );
 
-  sections.forEach((section) => {
-    section.style.opacity = "0";
-    section.style.transform = "translateY(22px)";
-    section.style.transition =
-      "opacity 800ms ease, transform 800ms ease";
-  });
-
   const observer = new IntersectionObserver(
-    (entries) => {
+    (entries, currentObserver) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.style.opacity = "1";
-          entry.target.style.transform = "translateY(0)";
-          observer.unobserve(entry.target);
+          entry.target.classList.add("is-visible");
+          currentObserver.unobserve(entry.target);
         }
       });
     },
-    {
-      threshold: 0.12
-    }
+    { threshold: 0.12 }
   );
-  
-/* Gentle sakura animation */
 
+  sections.forEach((section) => {
+    section.classList.add("reveal-ready");
+    observer.observe(section);
+  });
+}
+
+/* Sakura — pétales nocturnes */
 const sakuraLayer = document.querySelector(".sakura-layer");
-const reducedMotion = window.matchMedia(
-  "(prefers-reduced-motion: reduce)"
-).matches;
 
-if (sakuraLayer && !reducedMotion) {
+if (sakuraLayer && !reduceMotion) {
   const petalCount = window.innerWidth < 600 ? 10 : 18;
+  const fragment = document.createDocumentFragment();
 
   for (let i = 0; i < petalCount; i++) {
     const petal = document.createElement("span");
     petal.className = "sakura-petal";
 
-    petal.style.setProperty("--left", `${Math.random() * 100}%`);
-    petal.style.setProperty("--size", `${5 + Math.random() * 7}px`);
-    petal.style.setProperty("--duration", `${9 + Math.random() * 10}s`);
-    petal.style.setProperty("--delay", `${-Math.random() * 18}s`);
-    petal.style.setProperty("--drift", `${-70 + Math.random() * 140}px`);
+    petal.style.setProperty(
+      "--left",
+      `${Math.random() * 100}%`
+    );
+    petal.style.setProperty(
+      "--size",
+      `${5 + Math.random() * 7}px`
+    );
+    petal.style.setProperty(
+      "--duration",
+      `${12 + Math.random() * 12}s`
+    );
+    petal.style.setProperty(
+      "--delay",
+      `${-Math.random() * 24}s`
+    );
+    petal.style.setProperty(
+      "--drift",
+      `${-100 + Math.random() * 200}px`
+    );
+    petal.style.setProperty(
+      "--sway",
+      `${-35 + Math.random() * 70}px`
+    );
+    petal.style.setProperty(
+      "--rotation",
+      `${Math.random() * 360}deg`
+    );
 
-    sakuraLayer.appendChild(petal);
+    fragment.appendChild(petal);
   }
+
+  sakuraLayer.appendChild(fragment);
 }
 
-
-  sections.forEach((section) => observer.observe(section));
-}
-
-/* MATTYAS — navigation active au défilement */
-
+/* Navigation active au défilement */
 const navLinks = document.querySelectorAll(
   '.navbar nav a[href^="#"]'
 );
 
 const navSections = [...navLinks]
-  .map(link => document.querySelector(link.getAttribute("href")))
-  .filter(section => section !== null);
+  .map((link) =>
+    document.querySelector(link.getAttribute("href"))
+  )
+  .filter(Boolean);
 
 function updateActiveNav() {
   const marker = window.innerHeight * 0.35;
@@ -83,18 +99,14 @@ function updateActiveNav() {
     }
   }
 
-  navLinks.forEach(link => {
-    const isActive =
+  navLinks.forEach((link) => {
+    const active =
       currentSection &&
       link.getAttribute("href") === `#${currentSection.id}`;
 
-    if (isActive) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
-    }
+    link.classList.toggle("active", Boolean(active));
 
-    if (isActive) {
+    if (active) {
       link.setAttribute("aria-current", "location");
     } else {
       link.removeAttribute("aria-current");
@@ -105,14 +117,12 @@ function updateActiveNav() {
 window.addEventListener("scroll", updateActiveNav, {
   passive: true
 });
-
 window.addEventListener("resize", updateActiveNav);
 
-navLinks.forEach(link => {
+navLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    setTimeout(updateActiveNav, 350);
+    window.setTimeout(updateActiveNav, 350);
   });
 });
 
 updateActiveNav();
-
