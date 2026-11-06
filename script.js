@@ -59,3 +59,60 @@ if (sakuraLayer && !reducedMotion) {
 
   sections.forEach((section) => observer.observe(section));
 }
+
+/* MATTYAS — navigation active au défilement */
+
+const navLinks = document.querySelectorAll(
+  '.navbar nav a[href^="#"]'
+);
+
+const navSections = [...navLinks]
+  .map(link => document.querySelector(link.getAttribute("href")))
+  .filter(section => section !== null);
+
+function updateActiveNav() {
+  const marker = window.innerHeight * 0.35;
+  let currentSection = null;
+
+  for (const section of navSections) {
+    const rect = section.getBoundingClientRect();
+
+    if (rect.top <= marker && rect.bottom > marker) {
+      currentSection = section;
+      break;
+    }
+  }
+
+  navLinks.forEach(link => {
+    const isActive =
+      currentSection &&
+      link.getAttribute("href") === `#${currentSection.id}`;
+
+    if (isActive) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+
+    if (isActive) {
+      link.setAttribute("aria-current", "location");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+}
+
+window.addEventListener("scroll", updateActiveNav, {
+  passive: true
+});
+
+window.addEventListener("resize", updateActiveNav);
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    setTimeout(updateActiveNav, 350);
+  });
+});
+
+updateActiveNav();
+
