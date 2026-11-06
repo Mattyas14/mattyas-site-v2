@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08060d">
+  <title>Mon cahier — MATTYAS</title>
+  <meta name="description" content="Un espace pour les pensées, les mots et la poésie de MATTYAS.">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      background: #08060d;
+      color: #f5efff;
+    }
+
+    .personal-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      padding: 20px 6%;
+      border-bottom: 1px solid #21182c;
+    }
+
+    .personal-nav a {
+      color: #d2c9df;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .personal-nav a:hover,
+    .personal-nav a.active {
+      color: #c9b2ff;
+    }
+
+    .personal-nav .personal-logo {
+      color: #f5efff;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-right: auto;
+    }
+
+    .notebook-page {
+      width: min(820px, 88%);
+      margin: 0 auto;
+      padding: 90px 0;
+    }
+
+    .notebook-eyebrow {
+      color: #c9b2ff;
+      letter-spacing: 4px;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    .notebook-page h1 {
+      font-size: clamp(40px, 8vw, 72px);
+      font-weight: 500;
+      margin: 20px 0;
+    }
+
+    .notebook-subtitle {
+      color: #b7a9c9;
+      line-height: 1.9;
+      max-width: 570px;
+    }
+
+    .notebook-sheet {
+      margin: 55px 0 35px;
+      padding: 35px clamp(20px, 5vw, 48px);
+      background:
+        repeating-linear-gradient(
+          to bottom,
+          transparent 0,
+          transparent 35px,
+          rgba(201, 178, 255, 0.12) 36px
+        );
+      border-left: 1px solid #8065b7;
+      line-height: 2.2;
+    }
+
+    .notebook-sheet p {
+      color: #e0d7ec;
+      margin: 0 0 25px;
+      font-size: 16px;
+    }
+
+    .notebook-note {
+      margin-top: 45px;
+      padding: 24px;
+      border: 1px solid #30243f;
+      background: rgba(35, 23, 49, 0.28);
+      color: #b7a9c9;
+      line-height: 1.9;
+      font-size: 13px;
+    }
+
+    .notebook-back {
+      display: inline-block;
+      margin-top: 30px;
+      color: #c9b2ff;
+      text-decoration: none;
+    }
+
+    .notebook-back:hover {
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      .personal-nav {
+        gap: 12px;
+      }
+
+      .personal-nav .personal-logo {
+        width: 100%;
+      }
+
+      .notebook-page {
+        padding-top: 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="personal-nav">
+    <a class="personal-logo" href="index.html">MATTYAS</a>
+    <a href="index.html">Accueil</a>
+    <a href="moi.html">Moi</a>
+    <a class="active" href="cahier.html">Mon cahier</a>
+    <a href="musique.html">Musique</a>
+    <a href="inspirations.html">Inspirations</a>
+    <a href="projets.html">Projets</a>
+  </nav>
+
+  <main class="notebook-page">
+    <p class="notebook-eyebrow">02 — MON CAHIER</p>
+
+    <h1>Quelques pages de mwa.</h1>
+
+    <p class="notebook-subtitle">
+      Depuis bientôt deux ans, j'écris dans un cahier ce que je
+      ressens, ce que je pense et ce que je veux. Pas forcément
+      pour être lu. Juste pour laisser les mots exister.
+    </p>
+
+    <section class="notebook-sheet">
+      <p>
+        j'ai tjrs étais attiré par la poésie et la musique,
+        la plupart du temps, je laisse ce qui passe à travers
+        ma tête s'éxprimer dans ce cahier ;^^
+      </p>
+
+      <p>
+        Il y a des choses qu'on arrive plus facilement à écrire
+        qu'à dire. Des pensées qui restent dans un coin de la tête,
+        puis qui finissent par trouver leur place sur une page.
+      </p>
+
+      <p>
+        Ici, les mots n'ont pas besoin d'être parfaits.
+        Ils ont juste besoin d'être les miens.
+      </p>
+    </section>
+
+    <aside class="notebook-note">
+      Toutes les pages de ce cahier ne sont pas destinées à être
+      publiées. Certaines choses peuvent rester personnelles.
+      Ce site n'en montre qu'un petit aperçu.
+    </aside>
+
+    <a class="notebook-back" href="moi.html">
+      ← Revenir à ma présentation
+    </a>
+  </main>
+
+  <footer>
+    <p>BLACK SKY · VIOLET LIGHT · QUIET MIND</p>
+    <p>© MATTYAS</p>
+  </footer>
+</body>
+</html>
