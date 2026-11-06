@@ -581,3 +581,53 @@ footer .copyright {
   background: rgba(8, 6, 13, 0.78);
 }
 
+/* MATTYAS — signature nocturne */
+
+.hero h1 {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: clamp(3.2rem, 10vw, 7.5rem);
+  font-weight: 400;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #e8d9ff 45%,
+    #b99aff 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  text-shadow: 0 0 35px rgba(174, 132, 255, 0.22);
+  filter: drop-shadow(0 0 18px rgba(154, 130, 219, 0.18));
+}
+
+.hero h1 span {
+  color: #c9b2ff;
+  -webkit-text-fill-color: #c9b2ff;
+}
+
+.hero .eyebrow {
+  letter-spacing: 0.3em;
+  color: #c9b2ff;
+}
+
+.hero .subtitle {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+}
+
+.discover {
+  border-color: rgba(201, 178, 255, 0.55);
+  background: rgba(15, 8, 27, 0.45);
+  box-shadow: 0 0 25px rgba(154, 130, 219, 0.08);
+}
+
+.discover:hover {
+  box-shadow: 0 0 30px rgba(154, 130, 219, 0.2);
+}
+
