@@ -466,3 +466,52 @@ footer .copyright {
   z-index: 2;
 }
 
+/* MATTYAS — Japanese night background */
+
+.hero {
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(8, 6, 13, 0.22) 0%,
+      rgba(8, 6, 13, 0.12) 50%,
+      rgba(8, 6, 13, 0.78) 100%
+    ),
+    url("mattyas-night.png");
+
+  background-size: cover;
+  background-position: center 48%;
+  background-repeat: no-repeat;
+}
+
+/* Keep the title readable over the artwork */
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  padding: 40px 20px;
+  border-radius: 24px;
+  background: radial-gradient(
+    ellipse,
+    rgba(8, 6, 13, 0.48),
+    transparent 75%
+  );
+}
+
+/* Hide the CSS moon because the image already contains one */
+
+.hero .moon {
+  display: none;
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 760px) {
+  .hero {
+    background-position: 38% center;
+  }
+
+  .hero-content {
+    padding: 30px 12px;
+  }
+}
+
