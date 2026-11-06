@@ -515,3 +515,50 @@ footer .copyright {
   }
 }
 
+/* Sakura petals */
+
+.sakura-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.sakura-petal {
+  position: absolute;
+  top: -30px;
+  left: var(--left);
+  width: var(--size);
+  height: calc(var(--size) * 0.7);
+  border-radius: 100% 0 100% 0;
+  background: #e7b5ff;
+  opacity: 0;
+  box-shadow: 0 0 8px rgba(201, 178, 255, 0.5);
+  animation: sakura-fall var(--duration) linear var(--delay) infinite;
+}
+
+@keyframes sakura-fall {
+  0% {
+    transform: translate3d(0, -5vh, 0) rotate(0deg);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.65;
+  }
+  100% {
+    transform: translate3d(var(--drift), 110vh, 0) rotate(540deg);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sakura-petal {
+    animation: none;
+    display: none;
+  }
+}
+
