@@ -976,3 +976,63 @@ footer .copyright {
   }
 }
 
+/* ── MATTYAS — MOONLIGHT TITLE ── */
+
+.hero h1 {
+  color: #f5efff;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f5efff 35%,
+    #d8c3ff 68%,
+    #a98be8 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  filter: drop-shadow(
+    0 0 18px rgba(183, 139, 255, 0.20)
+  );
+
+  transition:
+    filter 0.5s ease,
+    letter-spacing 0.5s ease;
+}
+
+/* Halo plus intense au survol */
+.hero h1:hover {
+  filter:
+    drop-shadow(0 0 12px rgba(201, 178, 255, 0.42))
+    drop-shadow(0 0 35px rgba(147, 92, 230, 0.22));
+
+  letter-spacing: 0.09em;
+}
+
+/* Le point final devient une petite lune lumineuse */
+.hero h1 {
+  text-shadow: none;
+}
+
+/* Adaptation mobile */
+@media (max-width: 600px) {
+  .hero h1 {
+    filter: drop-shadow(
+      0 0 12px rgba(183, 139, 255, 0.22)
+    );
+  }
+
+  .hero h1:hover {
+    letter-spacing: inherit;
+  }
+}
+
+/* Respect des préférences de mouvement */
+@media (prefers-reduced-motion: reduce) {
+  .hero h1 {
+    transition: none;
+  }
+}
+
