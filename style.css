@@ -705,3 +705,13 @@ footer .copyright {
   }
 }
 
+/* Navigation — section active */
+
+.navbar nav a.active {
+  color: #f5efff;
+}
+
+.navbar nav a.active::after {
+  transform: scaleX(1);
+}
+
