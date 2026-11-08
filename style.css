@@ -476,7 +476,7 @@ footer .copyright {
       rgba(8, 6, 13, 0.12) 50%,
       rgba(8, 6, 13, 0.78) 100%
     ),
-    url("mattyas-navbar.png");
+    url("mattyas-night.png");
 
   background-size: cover;
   background-position: center 48%;
@@ -924,7 +924,7 @@ footer .copyright {
       rgba(12, 8, 22, 0.62),
       rgba(8, 6, 13, 0.86)
     ),
-    url("mattyas-night.png");
+    url("mattyas-navbar.png");
 
   background-size: cover;
   background-position: center 42%;
