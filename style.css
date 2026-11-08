@@ -2061,7 +2061,7 @@ body:has(.personal-page) {
       rgba(8, 6, 13, 0.48),
       rgba(8, 6, 13, 0.72)
     ),
-    url("mattyas-night.png") !important;
+    url("mattyas-navbar.png") !important;
 
   background-position: center 15%;
   background-size: cover;
