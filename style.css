@@ -2067,3 +2067,19 @@ body:has(.personal-page) {
   background-size: cover;
   background-repeat: no-repeat !important;
 }
+/* MATTYAS — ART ASSET BACKGROUND */
+
+body {
+  background-image:
+    linear-gradient(
+      rgba(8, 4, 18, 0.48),
+      rgba(8, 4, 18, 0.72)
+    ),
+    url("mattyas-background.png");
+
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #08040f;
+}
