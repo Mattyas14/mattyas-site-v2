@@ -1616,3 +1616,131 @@ body:has(.projects-page) {
   }
 }
 
+/* =====================================
+   MATTYAS — MOI / EDITORIAL VERSION
+===================================== */
+
+body:has(.personal-page) {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 5, 15, 0.30) 0%,
+      rgba(8, 5, 15, 0.48) 45%,
+      rgba(8, 5, 15, 0.78) 100%
+    ),
+    url("mattyas-night.png") center top / cover fixed !important;
+}
+
+/* Zone principale */
+
+.personal-page {
+  max-width: 760px !important;
+  width: 86% !important;
+  padding-top: 105px !important;
+  padding-bottom: 110px !important;
+}
+
+/* Petit numéro de section */
+
+.personal-eyebrow {
+  font-size: 11px !important;
+  letter-spacing: 5px !important;
+  margin-bottom: 28px;
+}
+
+/* Titre */
+
+.personal-page h1 {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-size: clamp(54px, 8vw, 82px) !important;
+  font-weight: 400 !important;
+  letter-spacing: -1px !important;
+  line-height: 1.05 !important;
+  text-transform: none !important;
+  text-shadow: 0 5px 35px rgba(0, 0, 0, 0.5) !important;
+  margin-bottom: 22px !important;
+}
+
+/* Sous-titre */
+
+.personal-subtitle {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-size: 21px !important;
+  color: #e2d5f4 !important;
+  margin-bottom: 65px !important;
+}
+
+/* Paragraphes : fini les énormes rectangles */
+
+.personal-block {
+  padding: 22px 26px !important;
+  margin: 35px 0 !important;
+  background: rgba(12, 8, 20, 0.58) !important;
+  border: none !important;
+  border-left: 2px solid rgba(201, 178, 255, 0.7) !important;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.14) !important;
+}
+
+.personal-block p {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-size: 20px !important;
+  line-height: 1.85 !important;
+  color: #f0e7f9 !important;
+  margin: 0 !important;
+}
+
+/* Citation */
+
+.personal-quote {
+  margin: 55px 0 !important;
+  padding: 30px 35px !important;
+  background: rgba(25, 15, 37, 0.66) !important;
+  border: none !important;
+  border-left: 2px solid #c9b2ff !important;
+  color: #f1e6ff !important;
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-size: 26px !important;
+  line-height: 1.6 !important;
+  box-shadow: none !important;
+}
+
+/* Navigation */
+
+.personal-nav {
+  background: rgba(8, 5, 15, 0.72) !important;
+}
+
+/* Retour */
+
+.personal-back {
+  margin-top: 45px !important;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  body:has(.personal-page) {
+    background-attachment: scroll !important;
+  }
+
+  .personal-page {
+    padding-top: 75px !important;
+  }
+
+  .personal-block {
+    padding: 18px !important;
+  }
+
+  .personal-block p {
+    font-size: 18px !important;
+  }
+
+  .personal-quote {
+    padding: 22px !important;
+    font-size: 22px !important;
+  }
+}
+
