@@ -1744,3 +1744,81 @@ body:has(.personal-page) {
   }
 }
 
+/* =====================================
+   MATTYAS — NAVIGATION UNIFIÉE
+===================================== */
+
+.personal-nav {
+  position: sticky !important;
+  top: 0;
+  z-index: 1000;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+
+  min-height: 72px !important;
+  padding: 0 5.5% !important;
+  gap: 30px !important;
+
+  background: rgba(8, 5, 15, 0.76) !important;
+  border-bottom: 1px solid rgba(201, 178, 255, 0.2) !important;
+  backdrop-filter: blur(14px);
+}
+
+/* Logo */
+
+.personal-nav .personal-logo {
+  display: inline-block;
+  width: auto !important;
+  margin-right: auto !important;
+
+  color: #f5efff !important;
+  font-family: "Cinzel", serif !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  letter-spacing: 4px !important;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Liens */
+
+.personal-nav a:not(.personal-logo) {
+  color: #e2d8ef !important;
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.2px !important;
+  text-decoration: none;
+
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Survol et page active */
+
+.personal-nav a:not(.personal-logo):hover,
+.personal-nav a.active {
+  color: #c9b2ff !important;
+  text-shadow: 0 0 12px rgba(201, 178, 255, 0.4);
+}
+
+/* Affichage mobile */
+
+@media (max-width: 700px) {
+  .personal-nav {
+    min-height: auto !important;
+    padding: 16px 5% !important;
+    flex-wrap: wrap;
+    gap: 14px !important;
+  }
+
+  .personal-nav .personal-logo {
+    width: 100% !important;
+  }
+
+  .personal-nav a:not(.personal-logo) {
+    font-size: 14px !important;
+  }
+}
+
