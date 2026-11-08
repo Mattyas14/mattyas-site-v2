@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -14,98 +14,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    .home-links {
-      padding: 90px 8%;
-      text-align: center;
-    }
-
-    .home-eyebrow {
-      color: #c9b2ff;
-      font-size: 11px;
-      letter-spacing: 4px;
-    }
-
-    .home-links h2 {
-      font-family: "Cinzel", serif;
-      font-size: clamp(28px, 5vw, 44px);
-      font-weight: 400;
-      margin: 20px 0;
-    }
-
-    .home-intro {
-      color: rgba(245,239,255,.72);
-      font-family: "Cormorant Garamond", serif;
-      font-size: 21px;
-      line-height: 1.8;
-      max-width: 620px;
-      margin: 0 auto;
-    }
-
-    .page-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      max-width: 1050px;
-      margin: 55px auto 0;
-      text-align: left;
-    }
-
-    .page-card {
-      padding: 28px;
-      border: 1px solid rgba(201,178,255,.2);
-      background: rgba(18,12,29,.65);
-      transition: transform .3s ease, border-color .3s ease;
-    }
-
-    .page-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(201,178,255,.6);
-    }
-
-    .page-card span {
-      color: #bda0ff;
-      font-size: 11px;
-      letter-spacing: 3px;
-    }
-
-    .page-card h3 {
-      font-family: "Cinzel", serif;
-      font-weight: 400;
-      margin: 18px 0 12px;
-    }
-
-    .page-card p {
-      color: rgba(245,239,255,.72);
-      line-height: 1.8;
-    }
-
-    .page-card a {
-      display: inline-block;
-      margin-top: 18px;
-      color: #c9b2ff;
-      text-decoration: none;
-    }
-
-    .page-card a:hover {
-      color: white;
-    }
-
-    .home-ending {
-      margin: 65px auto 0;
-      color: rgba(245,239,255,.7);
-      font-family: "Cormorant Garamond", serif;
-      font-size: 20px;
-      line-height: 1.8;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .page-card {
-        transition: none;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -114,6 +22,7 @@
     <a href="index.html" class="logo">月 MATTYAS</a>
 
     <nav aria-label="Navigation principale">
+      <a href="index.html" class="active" aria-current="page">Accueil</a>
       <a href="moi.html">Moi</a>
       <a href="cahier.html">Mon cahier</a>
       <a href="musique.html">Musique</a>
@@ -124,101 +33,192 @@
 
   <main>
 
-    <section class="hero" id="accueil">
-      <div class="moon"></div>
+    <!-- HERO -->
 
+    <section class="hero" id="accueil">
       <div class="hero-content">
+
         <p class="hero-eyebrow">
           BLACK SKY · VIOLET LIGHT · QUIET MIND
         </p>
 
         <h1>MATTYAS</h1>
 
-        <p class="hero-subtitle">Un univers, après minuit.</p>
-
-        <p class="hero-intro">
-          Entre pensées, musique, poésie et nuits japonaises,
-          bienvenue dans mon univers.
+        <p class="hero-subtitle">
+          Un univers, après minuit.
         </p>
 
-        <a href="#explorer" class="discover-link">
-          Explorer mon monde ↓
+        <p class="hero-intro">
+          « Un monde, mille pensées,<br>
+          une seule personne. »
+        </p>
+
+        <a href="#univers" class="discover-link">
+          Découvrir mon univers <span>↓</span>
         </a>
 
-        <p class="hero-japanese">夜 · 月 · 桜</p>
+      </div>
+
+      <div class="hero-japanese" aria-hidden="true">
+        夜 · 月 · 桜
       </div>
 
       <div class="sakura-layer" aria-hidden="true"></div>
       <div class="horizon" aria-hidden="true"></div>
     </section>
 
-    <section class="home-links" id="explorer">
 
-      <p class="home-eyebrow">WELCOME TO MY WORLD</p>
+    <!-- PRESENTATION -->
 
-      <h2>Un monde en plusieurs pages.</h2>
+    <section class="home-universe" id="univers">
 
-      <p class="home-intro">
-        Chaque page dévoile une partie de mon univers.
-        À toi de découvrir ce qui se cache derrière le silence.
-      </p>
+      <div class="home-about">
 
-      <div class="page-grid">
+        <div class="about-decoration">
+          <span>月</span>
+          <p>01 — À PROPOS</p>
+        </div>
 
-        <article class="page-card">
-          <span>01 — ME</span>
-          <h3>À propos de moi</h3>
-          <p>Quelques mots sur ma personnalité et ma façon de voir le monde.</p>
-          <a href="moi.html">Découvrir →</a>
-        </article>
+        <div class="about-content">
+          <p class="home-eyebrow">WELCOME TO MY WORLD</p>
 
-        <article class="page-card">
-          <span>02 — THOUGHTS</span>
-          <h3>Mon cahier</h3>
-          <p>Mes pensées, mes mots et mon rapport à l'écriture.</p>
-          <a href="cahier.html">Ouvrir les pages →</a>
-        </article>
+          <h2>Bienvenue dans<br>mon univers.</h2>
 
-        <article class="page-card">
-          <span>03 — MUSIC</span>
-          <h3>Musique</h3>
-          <p>Mes créations, mes sons et mes ambiances nocturnes.</p>
-          <a href="musique.html">Écouter l'univers →</a>
-        </article>
+          <div class="title-line"></div>
 
-        <article class="page-card">
-          <span>04 — INSPIRATION</span>
-          <h3>Inspirations</h3>
-          <p>Le Japon, les mangas, la poésie et la nuit.</p>
-          <a href="inspirations.html">Explorer →</a>
-        </article>
+          <p>
+            Ici, tu trouveras un peu de moi : mes pensées,
+            mes passions, mes projets... et tout ce qui me fait vibrer.
+          </p>
 
-        <article class="page-card">
-          <span>05 — CREATIONS</span>
-          <h3>Projets</h3>
-          <p>MATTYAS, KURO et les idées que je construis.</p>
-          <a href="projets.html">Voir mes projets →</a>
-        </article>
+          <a href="moi.html" class="outline-link">
+            En savoir plus →
+          </a>
+        </div>
 
       </div>
 
-      <p class="home-ending">
-        Tout n'a pas besoin d'être montré pour exister.<br>
-        Bienvenue dans mon monde, après minuit.
+
+      <!-- ACCÈS RAPIDES -->
+
+      <div class="home-access">
+
+        <p class="home-eyebrow">02 — ACCÈS RAPIDE</p>
+
+        <div class="access-grid">
+
+          <a href="moi.html" class="access-card">
+            <span class="access-symbol">人</span>
+            <span>Moi</span>
+            <span class="access-arrow">→</span>
+          </a>
+
+          <a href="cahier.html" class="access-card">
+            <span class="access-symbol">▤</span>
+            <span>Mon cahier</span>
+            <span class="access-arrow">→</span>
+          </a>
+
+          <a href="musique.html" class="access-card">
+            <span class="access-symbol">♫</span>
+            <span>Musique</span>
+            <span class="access-arrow">→</span>
+          </a>
+
+          <a href="inspirations.html" class="access-card">
+            <span class="access-symbol">鳥居</span>
+            <span>Inspirations</span>
+            <span class="access-arrow">→</span>
+          </a>
+
+          <a href="projets.html" class="access-card">
+            <span class="access-symbol">✧</span>
+            <span>Projets</span>
+            <span class="access-arrow">→</span>
+          </a>
+
+          <a href="projets.html" class="access-card">
+            <span class="access-symbol">黒</span>
+            <span>KURO</span>
+            <span class="access-arrow">→</span>
+          </a>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- MUSIQUE -->
+
+    <section class="home-music">
+
+      <div class="music-feature">
+
+        <p class="home-eyebrow">03 — ÉCOUTE MA MUSIQUE</p>
+
+        <a href="musique.html" class="music-card">
+
+          <div class="music-cover">
+            <span>23h53</span>
+          </div>
+
+          <div class="music-details">
+            <h3>23h53</h3>
+            <p>MATTYAS</p>
+            <span class="music-action">Découvrir le morceau ↗</span>
+          </div>
+
+          <span class="music-note">♫</span>
+
+        </a>
+
+      </div>
+
+      <div class="music-quote">
+        <p>
+          La musique, les mots, les rêves...<br>
+          Tout ce qui fait de moi ce que je suis.
+        </p>
+      </div>
+
+    </section>
+
+
+    <!-- SIGNATURE -->
+
+    <section class="home-signature">
+      <span>夜</span>
+
+      <p>
+        Tout n'a pas besoin d'être montré<br>
+        pour exister.
       </p>
 
+      <span class="signature-caption">
+        BLACK SKY · VIOLET LIGHT · QUIET MIND
+      </span>
     </section>
 
   </main>
 
-  <footer>
+
+  <footer class="home-footer">
+
     <a href="index.html" class="logo">月 MATTYAS</a>
+
     <p>BLACK SKY · VIOLET LIGHT · QUIET MIND</p>
-    <p>© 2026 MATTYAS — Into the night</p>
+
+    <p class="copyright">
+      © 2026 MATTYAS — Into the night
+    </p>
+
     <a href="#accueil">Retour en haut ↑</a>
+
   </footer>
 
   <script src="script.js"></script>
 
 </body>
 </html>
+```
