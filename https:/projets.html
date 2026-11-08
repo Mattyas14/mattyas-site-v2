@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08060d">
+  <title>Projets — MATTYAS</title>
+  <meta name="description" content="Les projets et créations de MATTYAS.">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      background: #08060d;
+      color: #f5efff;
+    }
+
+    .personal-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      padding: 20px 6%;
+      border-bottom: 1px solid #21182c;
+    }
+
+    .personal-nav a {
+      color: #d2c9df;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .personal-nav a:hover,
+    .personal-nav a.active {
+      color: #c9b2ff;
+    }
+
+    .personal-logo {
+      color: #f5efff !important;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-right: auto;
+    }
+
+    .projects-page {
+      width: min(950px, 88%);
+      margin: auto;
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      color: #c9b2ff;
+      font-size: 11px;
+      letter-spacing: 4px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 8vw, 76px);
+      font-weight: 500;
+      margin: 20px 0;
+    }
+
+    .intro {
+      color: #b7a9c9;
+      line-height: 2;
+      max-width: 620px;
+    }
+
+    .project-card {
+      margin-top: 35px;
+      padding: clamp(25px, 5vw, 45px);
+      border: 1px solid #352747;
+      background: linear-gradient(140deg, #191020, #0d0a13);
+    }
+
+    .project-card small {
+      color: #c9b2ff;
+      letter-spacing: 3px;
+    }
+
+    .project-card h2 {
+      font-size: clamp(30px, 6vw, 48px);
+      font-weight: 500;
+      margin: 20px 0 12px;
+    }
+
+    .project-card p {
+      color: #c5b9d3;
+      line-height: 1.9;
+      max-width: 620px;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: #c9b2ff;
+      text-decoration: none;
+    }
+
+    .project-link:hover {
+      color: white;
+    }
+
+    .ending {
+      margin-top: 55px;
+      border-left: 1px solid #8065b7;
+      padding: 8px 0 8px 24px;
+      color: #c5b9d3;
+      line-height: 2;
+    }
+
+    @media (max-width: 600px) {
+      .personal-nav {
+        gap: 12px;
+      }
+
+      .personal-logo {
+        width: 100%;
+      }
+
+      .projects-page {
+        padding-top: 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="personal-nav">
+    <a class="personal-logo" href="index.html">MATTYAS</a>
+    <a href="index.html">Accueil</a>
+    <a href="moi.html">Moi</a>
+    <a href="cahier.html">Mon cahier</a>
+    <a href="musique.html">Musique</a>
+    <a href="inspirations.html">Inspirations</a>
+    <a class="active" href="projets.html">Projets</a>
+  </nav>
+
+  <main class="projects-page">
+    <p class="eyebrow">05 — PROJETS</p>
+
+    <h1>Ce que je construis.</h1>
+
+    <p class="intro">
+      Des idées, des univers et des créations qui prennent
+      forme petit à petit. Chaque projet possède son identité.
+    </p>
+
+    <section class="project-card">
+      <small>UNIVERS PERSONNEL · 01</small>
+      <h2>MATTYAS</h2>
+      <p>
+        Mon univers personnel. Un espace autour de la musique,
+        de l'écriture, de mes inspirations et de mon esthétique
+        nocturne.
+      </p>
+      <a class="project-link" href="index.html">
+        Explorer MATTYAS →
+      </a>
+    </section>
+
+    <section class="project-card">
+      <small>UNIVERS CRÉATIF · 02</small>
+      <h2>KURO</h2>
+      <p>
+        Un univers indépendant à l'identité noire, blanche
+        et rouge, inspiré par Tokyo, les mangas et une esthétique
+        plus sombre.
+      </p>
+      <a class="project-link"
+         href="https://discord.gg/stbTbMZKtw"
+         target="_blank"
+         rel="noopener noreferrer">
+        Découvrir KURO sur Discord →
+      </a>
+    </section>
+
+    <section class="project-card">
+      <small>CRÉATION MUSICALE · 03</small>
+      <h2>23h53</h2>
+      <p>
+        Un projet musical personnel construit autour du piano,
+        de l'ambient et des sonorités nocturnes.
+      </p>
+      <a class="project-link" href="musique.html">
+        Voir la page musique →
+      </a>
+    </section>
+
+    <section class="ending">
+      Ce ne sont que quelques morceaux de ce que je construis.
+      D'autres idées viendront peut-être prendre leur place ici.
+    </section>
+  </main>
+
+  <footer>
+    <p>BLACK SKY · VIOLET LIGHT · QUIET MIND</p>
+    <p>© MATTYAS</p>
+  </footer>
+</body>
+</html>
