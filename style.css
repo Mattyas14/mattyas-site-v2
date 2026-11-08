@@ -1235,7 +1235,7 @@ a.card:hover .card-link {
       rgba(19, 13, 31, 0.98),
       rgba(8, 6, 13, 0.98)
     );
-
+   
   border-top-color: rgba(201, 178, 255, 0.18);
   border-bottom-color: rgba(201, 178, 255, 0.18);
 }
@@ -1298,6 +1298,179 @@ footer::before {
   a.card:hover,
   .feature-orb:hover {
     transform: none;
+  }
+}
+
+/* =====================================
+   MATTYAS 2.0 — UNIVERSE DESIGN
+   Harmonisation des pages intérieures
+===================================== */
+
+body:has(.personal-page),
+body:has(.notebook-page),
+body:has(.music-page),
+body:has(.inspiration-page),
+body:has(.projects-page) {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 6, 13, 0.78),
+      rgba(8, 6, 13, 0.94)
+    ),
+    url("mattyas-night.png") center top / cover fixed !important;
+  background-color: #08060d !important;
+  color: #f5efff;
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+/* Navigation */
+
+.personal-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(16px);
+  background: rgba(8, 6, 13, 0.78);
+  border-bottom: 1px solid rgba(201, 178, 255, 0.2);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+}
+
+.personal-nav a {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.personal-nav a:hover,
+.personal-nav a.active {
+  color: #d9c5ff;
+  text-shadow: 0 0 14px rgba(201, 178, 255, 0.45);
+}
+
+.personal-logo {
+  font-family: "Cinzel", Georgia, serif;
+  letter-spacing: 4px !important;
+}
+
+/* Titres */
+
+.personal-page h1,
+.notebook-page h1,
+.music-page h1,
+.inspiration-page h1,
+.projects-page h1 {
+  font-family: "Cinzel", Georgia, serif;
+  color: #f5efff;
+  text-shadow: 0 0 35px rgba(180, 140, 255, 0.15);
+  letter-spacing: 1px;
+}
+
+/* Petites signatures */
+
+.personal-eyebrow,
+.notebook-eyebrow,
+.music-eyebrow,
+.eyebrow {
+  color: #c9b2ff;
+  text-shadow: 0 0 12px rgba(201, 178, 255, 0.3);
+}
+
+/* Blocs de présentation */
+
+.personal-block,
+.notebook-sheet,
+.music-note,
+.inspiration-ending,
+.ending {
+  background: linear-gradient(
+    110deg,
+    rgba(35, 23, 49, 0.38),
+    rgba(12, 9, 18, 0.35)
+  );
+  backdrop-filter: blur(8px);
+  border-color: rgba(201, 178, 255, 0.42);
+}
+
+/* Citations et cartes */
+
+.personal-quote,
+.notebook-note,
+.music-project,
+.inspiration-card,
+.project-card {
+  background: linear-gradient(
+    135deg,
+    rgba(37, 25, 53, 0.78),
+    rgba(12, 9, 18, 0.88)
+  );
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 178, 255, 0.24);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.22);
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.inspiration-card:hover,
+.project-card:hover,
+.music-project:hover {
+  transform: translateY(-5px);
+  border-color: rgba(201, 178, 255, 0.65);
+  box-shadow: 0 18px 45px rgba(95, 60, 145, 0.18);
+}
+
+/* Paragraphes */
+
+.personal-block p,
+.notebook-sheet p,
+.music-project p,
+.inspiration-card p,
+.project-card p {
+  color: #ded4ed;
+  line-height: 2;
+}
+
+/* Liens */
+
+.personal-back,
+.notebook-back,
+.music-back,
+.back,
+.project-link {
+  transition: color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.personal-back:hover,
+.notebook-back:hover,
+.music-back:hover,
+.back:hover,
+.project-link:hover {
+  color: #ffffff;
+  letter-spacing: 1.5px;
+}
+
+/* Pied de page */
+
+body:has(.personal-page) footer,
+body:has(.notebook-page) footer,
+body:has(.music-page) footer,
+body:has(.inspiration-page) footer,
+body:has(.projects-page) footer {
+  border-top: 1px solid rgba(201, 178, 255, 0.2);
+  background: rgba(8, 6, 13, 0.78);
+  backdrop-filter: blur(12px);
+  color: #c9b2ff;
+}
+
+/* Accessibilité : limiter les animations si nécessaire */
+
+@media (prefers-reduced-motion: reduce) {
+  .personal-quote,
+  .notebook-note,
+  .music-project,
+  .inspiration-card,
+  .project-card,
+  .personal-nav a {
+    transition: none;
   }
 }
 
