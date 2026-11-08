@@ -2063,7 +2063,7 @@ body:has(.personal-page) {
     ),
     url("mattyas-night.png") !important;
 
-  background-size: cover !important;
-  background-position: center 42% !important;
+  background-position: center 15%;
+  background-size: cover;
   background-repeat: no-repeat !important;
 }
