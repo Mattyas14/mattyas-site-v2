@@ -4,238 +4,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <meta name="theme-color" content="#08060d">
-  <meta name="description" content="MATTYAS — un univers personnel entre pensées, musique, poésie, nuit japonaise et création.">
+  <meta name="description" content="MATTYAS — un univers personnel entre pensées, musique, poésie et nuits japonaises.">
 
   <title>MATTYAS — Into the night</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Navigation */
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
+    .home-links {
+      padding: 90px 8%;
+      text-align: center;
     }
 
-    body {
-      background: #08060d;
-      color: #f5efff;
-    }
-
-    .personal-section {
-      position: relative;
-      padding: 110px 8%;
-      overflow: hidden;
-    }
-
-    .personal-section:nth-of-type(even) {
-      background: rgba(201, 178, 255, 0.018);
-    }
-
-    .section-eyebrow {
+    .home-eyebrow {
       color: #c9b2ff;
-      font-size: 0.7rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      margin-bottom: 22px;
+      font-size: 11px;
+      letter-spacing: 4px;
     }
 
-    .personal-section h2 {
+    .home-links h2 {
       font-family: "Cinzel", serif;
-      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-size: clamp(28px, 5vw, 44px);
       font-weight: 400;
-      line-height: 1.4;
-      margin-bottom: 30px;
+      margin: 20px 0;
     }
 
-    .personal-intro,
-    .personal-text {
-      max-width: 740px;
+    .home-intro {
+      color: rgba(245,239,255,.72);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 21px;
+      line-height: 1.8;
+      max-width: 620px;
       margin: 0 auto;
-      color: rgba(245, 239, 255, 0.78);
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.3rem;
-      line-height: 1.9;
     }
 
-    .personal-intro p,
-    .personal-text p {
-      margin-bottom: 22px;
-    }
-
-    .journal-card {
-      max-width: 760px;
-      margin: 35px auto 0;
-      padding: clamp(25px, 5vw, 55px);
-      border: 1px solid rgba(201, 178, 255, 0.2);
-      background: rgba(15, 10, 27, 0.55);
-      box-shadow: 0 0 65px rgba(115, 67, 190, 0.07);
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.3rem;
-      line-height: 1.9;
-      color: rgba(245, 239, 255, 0.82);
-    }
-
-    .journal-symbol {
-      display: block;
-      color: #c9b2ff;
-      font-size: 2.8rem;
-      margin-bottom: 15px;
-    }
-
-    .journal-signature {
-      display: block;
-      margin-top: 30px;
-      color: #c9b2ff;
-      font-family: "Cinzel", serif;
-      font-size: 0.65rem;
-      letter-spacing: 0.18em;
-    }
-
-    .personal-section .section-eyebrow,
-    .personal-section > h2 {
-      text-align: center;
-    }
-
-    .journal-card p {
-      margin-bottom: 20px;
-    }
-
-    .personal-feature {
-      text-align: center;
-    }
-
-    .personal-feature .personal-text {
+    .page-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1050px;
+      margin: 55px auto 0;
       text-align: left;
     }
 
-    .personal-feature .feature-orb {
-      margin: 0 auto 30px;
+    .page-card {
+      padding: 28px;
+      border: 1px solid rgba(201,178,255,.2);
+      background: rgba(18,12,29,.65);
+      transition: transform .3s ease, border-color .3s ease;
     }
 
-    .personal-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 22px;
-      max-width: 1050px;
-      margin: 45px auto 0;
-    }
-
-    .personal-card {
-      padding: 30px;
-      border: 1px solid rgba(201, 178, 255, 0.16);
-      background: rgba(18, 12, 29, 0.48);
-      transition: transform 0.3s ease, border-color 0.3s ease;
-    }
-
-    .personal-card:hover {
+    .page-card:hover {
       transform: translateY(-5px);
-      border-color: rgba(201, 178, 255, 0.5);
+      border-color: rgba(201,178,255,.6);
     }
 
-    .personal-card .card-number {
+    .page-card span {
       color: #bda0ff;
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
+      font-size: 11px;
+      letter-spacing: 3px;
     }
 
-    .personal-card h3 {
-      margin: 18px 0 12px;
+    .page-card h3 {
       font-family: "Cinzel", serif;
       font-weight: 400;
+      margin: 18px 0 12px;
     }
 
-    .personal-card p {
-      color: rgba(245, 239, 255, 0.72);
+    .page-card p {
+      color: rgba(245,239,255,.72);
       line-height: 1.8;
     }
 
-    .personal-card a {
+    .page-card a {
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 18px;
       color: #c9b2ff;
       text-decoration: none;
     }
 
-    .personal-card a:hover {
-      color: #fff;
+    .page-card a:hover {
+      color: white;
     }
 
-    .personal-ending {
-      text-align: center;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .personal-ending > p {
-      max-width: 650px;
-      margin: 20px auto;
-      color: rgba(245, 239, 255, 0.76);
+    .home-ending {
+      margin: 65px auto 0;
+      color: rgba(245,239,255,.7);
       font-family: "Cormorant Garamond", serif;
-      font-size: 1.35rem;
-      line-height: 1.9;
-    }
-
-    .ending-symbol {
-      display: block;
-      margin-top: 40px;
-      color: #c9b2ff;
-      letter-spacing: 0.5em;
-    }
-
-    .personal-nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px 22px;
-      margin: 35px auto 0;
-      max-width: 850px;
-    }
-
-    .personal-nav a {
-      color: rgba(245, 239, 255, 0.72);
-      text-decoration: none;
-      font-size: 0.85rem;
-      transition: color 0.25s ease;
-    }
-
-    .personal-nav a:hover {
-      color: #c9b2ff;
-    }
-
-    .personal-section:target {
-      scroll-margin-top: 90px;
-    }
-
-    @media (max-width: 600px) {
-      .personal-section {
-        padding: 75px 7%;
-      }
-
-      .personal-intro,
-      .personal-text,
-      .journal-card {
-        font-size: 1.15rem;
-      }
-
-      .personal-nav {
-        gap: 15px;
-      }
+      font-size: 20px;
+      line-height: 1.8;
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      .personal-card {
+      .page-card {
         transition: none;
       }
     }
@@ -244,22 +110,20 @@
 
 <body>
 
-  <!-- NAVIGATION -->
   <header class="navbar">
-    <a href="#accueil" class="logo">月 MATTYAS</a>
+    <a href="index.html" class="logo">月 MATTYAS</a>
 
     <nav aria-label="Navigation principale">
-      <a href="#univers">Moi</a>
-      <a href="#cahier">Mon cahier</a>
-      <a href="#musique">Musique</a>
-      <a href="#japon">Japon</a>
-      <a href="#projets">Projets</a>
+      <a href="moi.html">Moi</a>
+      <a href="cahier.html">Mon cahier</a>
+      <a href="musique.html">Musique</a>
+      <a href="inspirations.html">Inspirations</a>
+      <a href="projets.html">Projets</a>
     </nav>
   </header>
 
   <main>
 
-    <!-- ACCUEIL -->
     <section class="hero" id="accueil">
       <div class="moon"></div>
 
@@ -277,8 +141,8 @@
           bienvenue dans mon univers.
         </p>
 
-        <a href="#univers" class="discover-link">
-          Entrer dans mon monde ↓
+        <a href="#explorer" class="discover-link">
+          Explorer mon monde ↓
         </a>
 
         <p class="hero-japanese">夜 · 月 · 桜</p>
@@ -288,277 +152,69 @@
       <div class="horizon" aria-hidden="true"></div>
     </section>
 
-    <!-- NAVIGATION INTERNE -->
-    <section class="personal-section" id="univers">
-      <p class="section-eyebrow">01 — BEHIND THE SILENCE</p>
+    <section class="home-links" id="explorer">
 
-      <h2>Bienvenue dans mon monde.</h2>
+      <p class="home-eyebrow">WELCOME TO MY WORLD</p>
 
-      <div class="personal-intro">
-        <p>
-          Moi, c’est Mattyas.
-        </p>
+      <h2>Un monde en plusieurs pages.</h2>
 
-        <p>
-          Je pense différemment des autres personnes de mon âge,
-          et même plus. Je suis assez réservé et silencieux.
-          J’aime le silence, être seul, écouter de la musique,
-          les mangas et l’univers japonais.
-        </p>
-
-        <p>
-          Je suis réservé, mais j’ai pas mal de choses à dire.
-          Il y a des pensées, des sentiments et des idées que
-          je ne partage pas forcément à voix haute.
-        </p>
-
-        <p>
-          Ici, je veux laisser entrevoir une partie de ce monde,
-          à ma manière, sans avoir à tout expliquer.
-        </p>
-      </div>
-
-      <nav class="personal-nav" aria-label="Explorer mon univers">
-        <a href="#silence">Derrière le silence</a>
-        <a href="#cahier">Mon cahier</a>
-        <a href="#musique">Musique & poésie</a>
-        <a href="#japon">Japon & mangas</a>
-        <a href="#reves">Mes rêves</a>
-        <a href="#projets">Mes créations</a>
-      </nav>
-    </section>
-
-    <!-- DERRIÈRE LE SILENCE -->
-    <section class="personal-section" id="silence">
-      <p class="section-eyebrow">02 — MY INNER WORLD</p>
-
-      <h2>Derrière le silence.</h2>
-
-      <div class="personal-text">
-        <p>
-          J’aime le calme et les moments où je peux simplement
-          rester seul avec mes pensées.
-        </p>
-
-        <p>
-          Je n’ai pas toujours besoin de parler pour exprimer
-          quelque chose. Parfois, j’ai simplement besoin de
-          laisser mes pensées suivre leur chemin.
-        </p>
-
-        <p>
-          Être silencieux ne signifie pas ne rien avoir à dire.
-          Certaines choses sont simplement plus faciles à
-          exprimer autrement.
-        </p>
-      </div>
-    </section>
-
-    <!-- MON CAHIER -->
-    <section class="personal-section" id="cahier">
-      <p class="section-eyebrow">03 — PRIVATE THOUGHTS</p>
-
-      <h2>Mon cahier, mes pensées.</h2>
-
-      <div class="journal-card">
-        <span class="journal-symbol" aria-hidden="true">「 」</span>
-
-        <p>
-          J’écris dans un cahier depuis bientôt deux ans
-          ce que je ressens, pense et veux.
-        </p>
-
-        <p>
-          J’ai toujours été attiré par la poésie et la musique.
-          La plupart du temps, je laisse ce qui passe à travers
-          ma tête s’exprimer dans ce cahier.
-        </p>
-
-        <p>
-          C’est un endroit où mes pensées peuvent exister
-          sans que je sois obligé de tout expliquer.
-          Certaines choses resteront personnelles.
-        </p>
-
-        <span class="journal-signature">
-          A PART OF ME, WRITTEN IN SILENCE
-        </span>
-      </div>
-    </section>
-
-    <!-- MUSIQUE ET POÉSIE -->
-    <section class="feature personal-section personal-feature" id="musique">
-      <p class="section-eyebrow">04 — MUSIC & POETRY</p>
-
-      <div class="feature-orb" aria-hidden="true"></div>
-
-      <h2>Une nuit en boucle.</h2>
-
-      <div class="personal-text">
-        <p>
-          La musique et la poésie sont deux choses qui
-          m’attirent depuis longtemps.
-        </p>
-
-        <p>
-          Les mots peuvent exprimer certaines pensées,
-          tandis qu’une mélodie peut transmettre une ambiance
-          que je n’arrive pas toujours à expliquer.
-        </p>
-
-        <p>
-          J’aime créer des univers sonores, imaginer des
-          atmosphères et laisser mes idées prendre forme.
-        </p>
-
-        <p>
-          <strong>23h53</strong> — une ambiance nocturne entre
-          piano, pluie et lumières de la ville.
-        </p>
-      </div>
-
-      <p class="journal-signature">
-        LISTEN TO THE NIGHT
+      <p class="home-intro">
+        Chaque page dévoile une partie de mon univers.
+        À toi de découvrir ce qui se cache derrière le silence.
       </p>
-    </section>
 
-    <!-- JAPON, MANGAS ET NUIT -->
-    <section class="personal-section" id="japon">
-      <p class="section-eyebrow">05 — 夜 · 月 · 桜</p>
+      <div class="page-grid">
 
-      <h2>Le Japon, les mangas et la nuit.</h2>
+        <article class="page-card">
+          <span>01 — ME</span>
+          <h3>À propos de moi</h3>
+          <p>Quelques mots sur ma personnalité et ma façon de voir le monde.</p>
+          <a href="moi.html">Découvrir →</a>
+        </article>
 
-      <div class="personal-text">
-        <p>
-          J’aime les mangas et l’univers japonais.
-          La nuit, la lune et les ambiances sombres font partie
-          de l’identité visuelle que je veux donner à MATTYAS.
-        </p>
+        <article class="page-card">
+          <span>02 — THOUGHTS</span>
+          <h3>Mon cahier</h3>
+          <p>Mes pensées, mes mots et mon rapport à l'écriture.</p>
+          <a href="cahier.html">Ouvrir les pages →</a>
+        </article>
 
-        <p>
-          Le noir, le violet et les lumières nocturnes
-          construisent cet univers : un endroit calme,
-          personnel, entre musique, imagination et création.
-        </p>
-      </div>
-    </section>
-
-    <!-- MES RÊVES -->
-    <section class="personal-section" id="reves">
-      <p class="section-eyebrow">06 — DREAMS & LOVE</p>
-
-      <h2>Une flamme jumelle.</h2>
-
-      <div class="personal-text">
-        <p>Je rêve d’amour.</p>
-
-        <p>
-          Je pense que chacun de nous a une flamme jumelle
-          dans ce monde, mais qu’il est souvent long,
-          éprouvant, épuisant, énervant et fou d’attendre
-          cette personne.
-        </p>
-
-        <p>
-          C’est une pensée qui fait partie de mes rêves
-          et de ma vision de l’amour. Je la laisse exister,
-          comme les autres pensées que je garde dans mon cahier.
-        </p>
-      </div>
-    </section>
-
-    <!-- MES CRÉATIONS -->
-    <section class="personal-section" id="projets">
-      <p class="section-eyebrow">07 — MY CREATIONS</p>
-
-      <h2>Donner vie à mes idées.</h2>
-
-      <div class="personal-cards">
-
-        <article class="personal-card">
-          <span class="card-number">01 — SOUND</span>
-
+        <article class="page-card">
+          <span>03 — MUSIC</span>
           <h3>Musique</h3>
-
-          <p>
-            Des sons, des ambiances nocturnes et des créations
-            inspirées par mes pensées.
-          </p>
+          <p>Mes créations, mes sons et mes ambiances nocturnes.</p>
+          <a href="musique.html">Écouter l'univers →</a>
         </article>
 
-        <article class="personal-card">
-          <span class="card-number">02 — WEB</span>
-
-          <h3>Web & expériences</h3>
-
-          <p>
-            Des sites et des projets personnels pour donner
-            une forme concrète à mon imagination.
-          </p>
-
-          <a href="https://github.com/Mattyas14"
-             target="_blank"
-             rel="noopener noreferrer">
-            Mes projets GitHub ↗
-          </a>
+        <article class="page-card">
+          <span>04 — INSPIRATION</span>
+          <h3>Inspirations</h3>
+          <p>Le Japon, les mangas, la poésie et la nuit.</p>
+          <a href="inspirations.html">Explorer →</a>
         </article>
 
-        <article class="personal-card">
-          <span class="card-number">03 — KURO</span>
-
-          <h3>KURO</h3>
-
-          <p>
-            Un univers créatif distinct, à l’identité sombre,
-            entre projets numériques et communauté.
-          </p>
-
-          <a href="https://discord.gg/stbTbMZKtw"
-             target="_blank"
-             rel="noopener noreferrer">
-            Découvrir KURO ↗
-          </a>
+        <article class="page-card">
+          <span>05 — CREATIONS</span>
+          <h3>Projets</h3>
+          <p>MATTYAS, KURO et les idées que je construis.</p>
+          <a href="projets.html">Voir mes projets →</a>
         </article>
 
       </div>
-    </section>
 
-    <!-- CONCLUSION -->
-    <section class="personal-section" id="fin">
-      <div class="personal-ending">
-        <p class="section-eyebrow">08 — INTO THE NIGHT</p>
+      <p class="home-ending">
+        Tout n'a pas besoin d'être montré pour exister.<br>
+        Bienvenue dans mon monde, après minuit.
+      </p>
 
-        <h2>Tu n’as vu qu’un fragment.</h2>
-
-        <p>
-          Ce site rassemble une partie de mes pensées,
-          de mes rêves, de mes passions et de mes créations.
-        </p>
-
-        <p>
-          Tout n’a pas besoin d’être montré pour exister.
-          Certaines choses sont visibles, d’autres resteront
-          dans mon cahier.
-        </p>
-
-        <p>
-          Bienvenue dans mon monde, après minuit.
-        </p>
-
-        <span class="ending-symbol">月 · 夜 · 桜</span>
-      </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
   <footer>
-    <a href="#accueil" class="logo">月 MATTYAS</a>
-
+    <a href="index.html" class="logo">月 MATTYAS</a>
     <p>BLACK SKY · VIOLET LIGHT · QUIET MIND</p>
-
     <p>© 2026 MATTYAS — Into the night</p>
-
     <a href="#accueil">Retour en haut ↑</a>
   </footer>
 
