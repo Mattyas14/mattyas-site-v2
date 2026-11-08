@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08060d">
+  <title>Musique — MATTYAS</title>
+  <meta name="description" content="La musique et les créations de MATTYAS.">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      background: #08060d;
+      color: #f5efff;
+    }
+
+    .personal-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      padding: 20px 6%;
+      border-bottom: 1px solid #21182c;
+    }
+
+    .personal-nav a {
+      color: #d2c9df;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .personal-nav a:hover,
+    .personal-nav a.active {
+      color: #c9b2ff;
+    }
+
+    .personal-logo {
+      color: #f5efff !important;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-right: auto;
+    }
+
+    .music-page {
+      width: min(900px, 88%);
+      margin: auto;
+      padding: 90px 0;
+    }
+
+    .music-eyebrow {
+      color: #c9b2ff;
+      font-size: 11px;
+      letter-spacing: 4px;
+    }
+
+    .music-page h1 {
+      font-size: clamp(42px, 8vw, 76px);
+      font-weight: 500;
+      margin: 20px 0;
+    }
+
+    .music-intro {
+      max-width: 600px;
+      color: #b7a9c9;
+      line-height: 2;
+    }
+
+    .music-project {
+      margin-top: 65px;
+      padding: clamp(25px, 5vw, 50px);
+      border: 1px solid #352747;
+      background:
+        linear-gradient(135deg, rgba(76, 48, 105, .24), transparent 65%),
+        #100c18;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .music-project small {
+      color: #c9b2ff;
+      letter-spacing: 3px;
+    }
+
+    .music-project h2 {
+      font-size: clamp(35px, 7vw, 58px);
+      font-weight: 400;
+      margin: 25px 0 10px;
+    }
+
+    .music-project p {
+      color: #c5b9d3;
+      line-height: 1.9;
+      max-width: 570px;
+    }
+
+    .music-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .music-details span {
+      border: 1px solid #49365e;
+      padding: 8px 13px;
+      color: #d7c8eb;
+      font-size: 12px;
+    }
+
+    .music-note {
+      margin-top: 45px;
+      padding: 25px;
+      border-left: 1px solid #8065b7;
+      color: #c5b9d3;
+      line-height: 2;
+    }
+
+    .music-back {
+      display: inline-block;
+      margin-top: 35px;
+      color: #c9b2ff;
+      text-decoration: none;
+    }
+
+    .music-back:hover {
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      .personal-nav {
+        gap: 12px;
+      }
+
+      .personal-logo {
+        width: 100%;
+      }
+
+      .music-page {
+        padding-top: 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="personal-nav">
+    <a class="personal-logo" href="index.html">MATTYAS</a>
+    <a href="index.html">Accueil</a>
+    <a href="moi.html">Moi</a>
+    <a href="cahier.html">Mon cahier</a>
+    <a class="active" href="musique.html">Musique</a>
+    <a href="inspirations.html">Inspirations</a>
+    <a href="projets.html">Projets</a>
+  </nav>
+
+  <main class="music-page">
+    <p class="music-eyebrow">03 — MUSIQUE</p>
+
+    <h1>Une autre façon de parler.</h1>
+
+    <p class="music-intro">
+      La musique occupe une place particulière dans mon univers.
+      Parfois, quelques notes arrivent à exprimer ce que les mots
+      n'arrivent pas vraiment à transmettre.
+    </p>
+
+    <section class="music-project">
+      <small>PROJET PERSONNEL · 01</small>
+
+      <h2>23h53</h2>
+
+      <p>
+        Une création autour de la nuit, du calme et de tout ce
+        qui peut traverser l'esprit lorsque le monde ralentit.
+      </p>
+
+      <p>
+        Une composition construite autour du piano, de la batterie,
+        de nappes ambient et d'une ambiance de pluie et de ville
+        nocturne.
+      </p>
+
+      <div class="music-details">
+        <span>PIANO</span>
+        <span>AMBIENT</span>
+        <span>DRUMS</span>
+        <span>NIGHT ATMOSPHERE</span>
+      </div>
+    </section>
+
+    <section class="music-note">
+      <p>
+        Je ne cherche pas forcément à raconter une histoire
+        précise avec la musique. Je préfère laisser chacun
+        ressentir quelque chose à sa manière.
+      </p>
+    </section>
+
+    <a class="music-back" href="index.html">
+      ← Retour à l'accueil
+    </a>
+  </main>
+
+  <footer>
+    <p>BLACK SKY · VIOLET LIGHT · QUIET MIND</p>
+    <p>© MATTYAS</p>
+  </footer>
+</body>
+</html>
