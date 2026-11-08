@@ -79,42 +79,7 @@
       color: white;
     }
 
-    .personal-nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      align-items: center;
-      padding: 20px 6%;
-      border-bottom: 1px solid #21182c;
-    }
-
-    .personal-nav a {
-      color: #d2c9df;
-      text-decoration: none;
-      font-size: 13px;
-    }
-
-    .personal-nav a:hover,
-    .personal-nav a.active {
-      color: #c9b2ff;
-    }
-
-    .personal-nav .personal-logo {
-      color: #f5efff;
-      font-weight: bold;
-      letter-spacing: 3px;
-      margin-right: auto;
-    }
-
-    @media (max-width: 600px) {
-      .personal-nav {
-        gap: 12px;
-      }
-
-      .personal-nav .personal-logo {
-        width: 100%;
-      }
-
+          @media (max-width: 600px) {
       .personal-page {
         padding-top: 65px;
       }
@@ -123,15 +88,20 @@
 </head>
 
 <body>
-  <nav class="personal-nav">
-    <a class="personal-logo" href="index.html">月 MATTYAS</a>
+  
+<header class="navbar">
+  <a href="index.html" class="logo">月 MATTYAS</a>
+
+  <nav aria-label="Navigation principale">
     <a href="index.html">Accueil</a>
-    <a class="active" href="moi.html">Moi</a>
+    <a href="moi.html" class="active" aria-current="page">Moi</a>
     <a href="cahier.html">Mon cahier</a>
     <a href="musique.html">Musique</a>
     <a href="inspirations.html">Inspirations</a>
     <a href="projets.html">Projets</a>
   </nav>
+</header>
+
 
   <main class="personal-page">
     <p class="personal-eyebrow">01 — À PROPOS</p>
