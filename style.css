@@ -2602,3 +2602,29 @@ body {
 .access-arrow {
   flex: 0 0 auto;
 }
+/* MATTYAS — TYPOGRAPHIE À PROPOS */
+
+.about-content h2 {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  line-height: 1.12;
+  margin: 12px 0;
+}
+
+.about-content .title-line {
+  width: 65px;
+  margin: 16px 0;
+}
+
+.about-content > p:not(.home-eyebrow) {
+  max-width: 430px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.outline-link {
+  margin-top: 14px;
+  padding: 9px 16px;
+  border: 1px solid rgba(201, 178, 255, 0.45);
+  border-radius: 2px;
+  text-decoration: none;
+}
