@@ -2628,14 +2628,38 @@ body {
   border-radius: 2px;
   text-decoration: none;
 }
-/* MATTYAS — PORTRAIT À PROPOS */
+/* MATTYAS — CADRE PORTRAIT ART ASSET */
 
 .about-decoration {
   position: relative;
-  width: 100%;
-  max-width: 245px;
-  padding: 10px;
+  width: 245px;
+  padding: 12px;
   box-sizing: border-box;
+  isolation: isolate;
+}
+
+/* Cadre extérieur décalé */
+.about-decoration::before {
+  content: "";
+  position: absolute;
+  inset: -5px 0 30px -5px;
+  border: 1px solid rgba(201, 178, 255, 0.75);
+  box-shadow: 0 0 12px rgba(174, 116, 255, 0.2);
+  z-index: -1;
+}
+
+/* Lumière décorative */
+.about-decoration::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 42px;
+  height: 42px;
+  border-top: 1px solid #d9baff;
+  border-left: 1px solid #d9baff;
+  box-shadow: -3px -3px 12px rgba(190, 135, 255, 0.2);
+  pointer-events: none;
 }
 
 .about-portrait {
@@ -2644,20 +2668,20 @@ body {
   height: 245px;
   object-fit: cover;
   object-position: center;
-  border: 1px solid rgba(201, 178, 255, 0.45);
-  box-shadow: 0 0 18px rgba(160, 100, 230, 0.2);
+  border: 1px solid rgba(201, 178, 255, 0.65);
+  box-shadow: 0 0 18px rgba(160, 100, 230, 0.18);
 }
 
-.about-decoration::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border: 1px solid rgba(201, 178, 255, 0.65);
-  pointer-events: none;
+.about-decoration > p {
+  margin-top: 20px;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 0.75rem;
+  color: #c9b2ff;
 }
 
 @media (max-width: 900px) {
   .about-decoration {
-    max-width: 220px;
+    width: 220px;
   }
 }
