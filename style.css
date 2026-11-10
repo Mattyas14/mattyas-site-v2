@@ -2375,3 +2375,68 @@ body {
     padding: 5px 0;
   }
 }
+/* MATTYAS — AJUSTEMENTS FINAUX À PROPOS */
+
+.home-universe {
+  padding: 45px 4% 65px;
+}
+
+.home-about {
+  width: min(100%, 900px);
+  box-sizing: border-box;
+  grid-template-columns: 220px 1fr;
+  gap: 35px;
+  padding: 25px 30px;
+  margin: 0 auto;
+}
+
+.about-decoration {
+  padding-right: 28px;
+}
+
+.about-portrait {
+  max-width: 180px;
+}
+
+.about-decoration p {
+  margin-top: 14px;
+  letter-spacing: 3px;
+}
+
+.about-content {
+  padding: 0 5px;
+  transform: translateY(-8px);
+}
+
+.about-content h2 {
+  font-size: clamp(32px, 3.5vw, 40px);
+  margin: 10px 0;
+}
+
+.about-content .title-line {
+  margin: 15px 0;
+}
+
+.about-content > p:not(.home-eyebrow) {
+  line-height: 1.65;
+}
+
+.about-content .outline-link {
+  margin-top: 16px;
+}
+
+@media (max-width: 700px) {
+  .home-about {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 25px;
+  }
+
+  .about-decoration {
+    padding-right: 0;
+  }
+
+  .about-content {
+    transform: none;
+  }
+}
