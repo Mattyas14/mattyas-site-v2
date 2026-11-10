@@ -2248,3 +2248,130 @@ body {
     margin: 0 auto;
   }
 }
+/* MATTYAS — À PROPOS : VERSION ART ASSET */
+
+.home-universe {
+  padding: 45px 4% 65px;
+}
+
+.home-about {
+  display: grid;
+  grid-template-columns: 245px 1fr;
+  gap: 40px;
+
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  padding: 28px 35px;
+
+  background: rgba(8, 5, 17, 0.78);
+  border: 1px solid rgba(201, 178, 255, 0.25);
+  border-radius: 20px;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  box-shadow: 0 0 30px rgba(154, 100, 230, 0.12);
+}
+
+.about-decoration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-right: 35px;
+  border-right: 1px solid rgba(201, 178, 255, 0.3);
+
+  position: relative;
+}
+
+.about-decoration::after {
+  content: "✦";
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  color: #d9b5ff;
+  text-shadow: 0 0 12px #c084fc;
+  transform: translateY(-50%);
+}
+
+.about-portrait {
+  width: 100%;
+  max-width: 205px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+
+  border: 1px solid rgba(201, 178, 255, 0.65);
+  border-radius: 3px;
+
+  box-shadow:
+    0 0 12px rgba(168, 85, 247, 0.3),
+    0 0 25px rgba(168, 85, 247, 0.12);
+}
+
+.about-decoration p {
+  margin-top: 18px;
+  color: #c9b2ff;
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px 5px;
+}
+
+.about-content h2 {
+  font-size: clamp(34px, 4vw, 43px);
+  line-height: 1.15;
+  margin: 12px 0;
+}
+
+.about-content .title-line {
+  width: 65px;
+  margin: 18px 0;
+}
+
+.about-content > p:not(.home-eyebrow) {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.about-content .outline-link {
+  align-self: flex-start;
+  margin-top: 20px;
+}
+
+/* Adaptation mobile */
+
+@media (max-width: 700px) {
+  .home-universe {
+    padding: 35px 5%;
+  }
+
+  .home-about {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 25px;
+  }
+
+  .about-decoration {
+    border-right: none;
+    border-bottom: 1px solid rgba(201, 178, 255, 0.3);
+    padding: 0 0 20px;
+  }
+
+  .about-decoration::after {
+    display: none;
+  }
+
+  .about-portrait {
+    max-width: 190px;
+  }
+
+  .about-content {
+    padding: 5px 0;
+  }
+}
