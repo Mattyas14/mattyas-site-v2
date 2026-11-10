@@ -2628,3 +2628,36 @@ body {
   border-radius: 2px;
   text-decoration: none;
 }
+/* MATTYAS — PORTRAIT À PROPOS */
+
+.about-decoration {
+  position: relative;
+  width: 100%;
+  max-width: 245px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.about-portrait {
+  display: block;
+  width: 100%;
+  height: 245px;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid rgba(201, 178, 255, 0.45);
+  box-shadow: 0 0 18px rgba(160, 100, 230, 0.2);
+}
+
+.about-decoration::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(201, 178, 255, 0.65);
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .about-decoration {
+    max-width: 220px;
+  }
+}
