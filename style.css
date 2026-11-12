@@ -2736,3 +2736,31 @@ body {
 .outline-link {
   display: inline-block;
 }
+/* MATTYAS — PROPORTIONS DU PORTRAIT */
+
+.home-about .about-decoration {
+  width: 262px;
+  padding: 12px;
+}
+
+.home-about .about-decoration .about-portrait {
+  width: 100%;
+  height: 245px !important;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Cadre extérieur */
+.home-about .about-decoration::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 265px;
+  inset: 0 auto auto 0;
+}
+
+/* Titre sous le cadre */
+.home-about .about-decoration > p {
+  margin-top: 32px;
+  white-space: nowrap;
+}
