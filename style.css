@@ -2455,9 +2455,9 @@ body {
   filter: drop-shadow(0 0 9px rgba(190, 135, 255, 0.75));
 }
 
-.access-icon.torii-icon {
-  color: #f04428;
-  filter: drop-shadow(0 0 5px rgba(240, 68, 40, 0.4));
+.torii-icon {
+  color: #c9a2ff !important;
+  filter: drop-shadow(0 0 5px rgba(190, 135, 255, 0.4));
 }
 
 .access-card:hover .access-icon.torii-icon {
