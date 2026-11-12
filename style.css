@@ -2706,3 +2706,33 @@ body {
 .about-content {
   transform: translateX(45px);
 }
+/* MATTYAS — PROPORTIONS FINALES À PROPOS */
+
+.home-intro-layout {
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 40px;
+}
+
+.home-about {
+  grid-template-columns: 245px minmax(0, 1fr);
+  gap: 18px;
+  padding-right: 15px;
+}
+
+.about-content {
+  transform: none;
+  padding-left: 0;
+  min-width: 0;
+}
+
+.about-content h2 {
+  font-size: clamp(2rem, 2.5vw, 2.4rem);
+}
+
+.about-content > p:not(.home-eyebrow) {
+  max-width: 390px;
+}
+
+.outline-link {
+  display: inline-block;
+}
