@@ -2701,3 +2701,8 @@ body {
 .about-content .home-eyebrow {
   margin-bottom: 14px;
 }
+/* MATTYAS — ESPACEMENT FINAL DU TEXTE */
+
+.about-content {
+  transform: translateX(45px);
+}
