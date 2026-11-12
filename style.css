@@ -2415,6 +2415,30 @@ body {
   }
 }
 
+/* MATTYAS — ÉTOILE LUMINEUSE DU PORTRAIT */
+
+.about-decoration {
+  position: relative;
+}
+
+.about-decoration > p {
+  position: relative;
+}
+
+.about-decoration > p::before {
+  content: "✦";
+  position: absolute;
+  right: -22px;
+  top: -155px;
+  transform: translateY(-50%);
+  color: #e3c5ff;
+  font-size: 1.35rem;
+  text-shadow:
+    0 0 5px #d9baff,
+    0 0 12px #b77aff,
+    0 0 22px rgba(183, 122, 255, 0.8);
+}
+
 
 
 
