@@ -2439,6 +2439,35 @@ body {
     0 0 22px rgba(183, 122, 255, 0.8);
 }
 
+/* MATTYAS — ICÔNES DES ACCÈS RAPIDES */
+
+.access-icon {
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  color: #c9a0ff;
+  filter: drop-shadow(0 0 5px rgba(190, 135, 255, 0.35));
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.access-card:hover .access-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 9px rgba(190, 135, 255, 0.75));
+}
+
+.access-icon.torii-icon {
+  color: #f04428;
+  filter: drop-shadow(0 0 5px rgba(240, 68, 40, 0.4));
+}
+
+.access-card:hover .access-icon.torii-icon {
+  filter: drop-shadow(0 0 9px rgba(240, 68, 40, 0.7));
+}
+
+.access-card {
+  text-decoration: none;
+}
+
 
 
 
