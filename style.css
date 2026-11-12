@@ -2690,3 +2690,14 @@ body {
     width: 262px;
   }
 }
+/* MATTYAS — ESPACEMENT DU TEXTE À PROPOS */
+
+.about-content {
+  padding-left: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.about-content .home-eyebrow {
+  margin-bottom: 14px;
+}
